@@ -18,7 +18,7 @@ namespace SampleApp.Data
             // This will disable msi auth for local db not suggested for production
             if (!conn.ConnectionString.Contains("Trusted_Connection=True"))
             {
-                conn.AccessToken = new AzureServiceTokenProvider().GetAccessTokenAsync("https://database.windows.net/")
+                conn.AccessToken = new AzureServiceTokenProvider().GetAccessTokenAsync("https://database.usgovcloudapi.net/")
                     .Result;
             }
         }
